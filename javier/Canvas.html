@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas HTML5</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fac6e9; /* Cielo azul claro */
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        canvas {
+            background-color: #87CEFA; /* Azul cielo */
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dibujo con Canvas</h1>
+    <canvas id="myCanvas" width="500" height="400"></canvas>
+    
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // Fondo de césped
+        ctx.fillStyle = "#98FB98"; // Verde claro
+        ctx.fillRect(0, 300, 500, 100);
+
+        // Sol
+        ctx.beginPath();
+        ctx.arc(400, 80, 50, 0, Math.PI * 2);
+        ctx.fillStyle = "#FFD700"; // Amarillo
+        ctx.fill();
+        ctx.closePath();
+
+        // Casa
+        ctx.fillStyle = "#FF6347"; // Rojo ladrillo
+        ctx.fillRect(150, 200, 200, 100);
+
+        // Techo
+        ctx.beginPath();
+        ctx.moveTo(140, 200);
+        ctx.lineTo(260, 120);
+        ctx.lineTo(360, 200);
+        ctx.closePath();
+        ctx.fillStyle = "#8B0000"; // Rojo oscuro
+        ctx.fill();
+
+        // Puerta
+        ctx.fillStyle = "#654321"; // Marrón
+        ctx.fillRect(230, 250, 40, 50);
+        
+    </script>
+</body>
+</html>

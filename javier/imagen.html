@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen HTML5</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #E3F2FD; /* Azul pastel claro */
+            color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título estilizado */
+        h1 {
+            color: #1565C0; /* Azul oscuro */
+            font-size: 24px;
+        }
+
+        /* Imagen con bordes redondeados y efecto hover */
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05); /* Efecto de zoom suave */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Imagen en la Página</h1>
+        <img src="descarga.jpg" alt="Descripción de la imagen">
+    </div>
+</body>
+</html>

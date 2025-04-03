@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista en HTML5</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFEFD5; /* Color pastel durazno */
+            color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal */
+        .container {
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Título estilizado */
+        h1 {
+            color: #D2691E; /* Marrón chocolate */
+            font-size: 24px;
+        }
+
+        /* Lista con viñetas personalizadas */
+        ul {
+            list-style: none; /* Quitamos las viñetas por defecto */
+            padding: 0;
+        }
+
+        ul li {
+            background: #FFA07A; /* Naranja pastel */
+            color: white;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Efecto hover en los elementos de la lista */
+        ul li:hover {
+            transform: scale(1.05);
+            background: #FF7F50; /* Color coral más intenso */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Elementos</h1> 
+        <ul>
+            <li>🍎 Manzanas</li> 
+            <li>🍌 Plátanos</li> 
+            <li>🍐 Peras</li> 
+        </ul>
+    </div> 
+</body>
+</html>

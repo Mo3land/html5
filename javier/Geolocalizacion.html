@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocalización HTML5</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #E0F7FA; /* Azul pastel claro */
+            color: #444;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            color: #00796B; /* Verde azulado */
+        }
+
+        /* Estilo para el botón */
+        button {
+            background-color: #4DB6AC; /* Verde pastel */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #00796B; /* Verde más oscuro */
+        }
+
+        /* Caja para mostrar la ubicación */
+        #location {
+            margin-top: 20px;
+            padding: 15px;
+            background: #FFF; /* Blanco */
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            min-width: 250px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Geolocalización en HTML5</h1>
+    <button onclick="getLocation()">Obtener mi ubicación</button>
+    <p id="location">Tu ubicación aparecerá aquí</p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocalización no soportada por este navegador.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").innerHTML = 
+                "📍 Latitud: " + position.coords.latitude + "<br>📍 Longitud: " + position.coords.longitude;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML = "❌ Permiso denegado.";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML = "⚠️ Ubicación no disponible.";
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML = "⏳ Tiempo de espera agotado.";
+                    break;
+                default:
+                    document.getElementById("location").innerHTML = "❗ Error desconocido.";
+            }
+        }
+    </script>
+</body>
+</html>
