@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage en HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #E3F2FD;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        button {
+            background: #64B5F6;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #1565C0;
+        }
+        #output {
+            font-size: 18px;
+            color: #1565C0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Guardar en Almacenamiento Local</h1>
+        <button onclick="guardar()">Guardar Datos</button>
+        <button onclick="leer()">Leer Datos</button>
+        <p id="output"></p>
+    </div>
+
+    <script>
+        function guardar() {
+            localStorage.setItem("nombre", "Jose Luis");
+            alert("Datos guardados");
+        }
+
+        function leer() {
+            let nombre = localStorage.getItem("nombre") || "No hay datos guardados";
+            document.getElementById("output").textContent = "Nombre: " + nombre;
+        }
+    </script>
+</body>
+</html>

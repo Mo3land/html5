@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="es"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Botón con JavaScript</title> 
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                flex-direction: column;
+                background-color: #f8f0fc;
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            h1 {
+                color: #a28089;
+            }
+            button {
+                background-color: #ffdde1;
+                border: none;
+                padding: 15px 25px;
+                font-size: 16px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: #6a0572;
+                transition: background-color 0.3s;
+            }
+            button:hover {
+                background-color: #ffccd5;
+            }
+        </style>
+        <script>
+            function mostrarMensaje() {
+                alert("Mondongo🤪");
+            }
+        </script> 
+    </head> 
+    <body> 
+        <h1>boton</h1> 
+        <button onclick="mostrarMensaje()"> No hagas clic aquí</button> 
+    </body> 
+</html>
